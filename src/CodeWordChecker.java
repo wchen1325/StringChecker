@@ -16,7 +16,7 @@ public class CodeWordChecker implements StringChecker {
     }
 
     public boolean isValid(String str){
-        if(str.indexOf(this.codeWord) == -1){
+        if(!(str.indexOf(this.codeWord) == -1) || str.length() < min || str.length() > max){
             return false;
         }
         return true;
